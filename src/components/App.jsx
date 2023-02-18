@@ -1,26 +1,12 @@
-// export const App = () => {
-//   return (
-//     <div
-//       style={{
-//         height: '100vh',
-//         display: 'flex',
-//         justifyContent: 'center',
-//         alignItems: 'center',
-//         fontSize: 40,
-//         color: '#010101'
-//       }}
-//     >
-//       React homework template
-//     </div>
-//   );
-// };
-
-import { Profile } from 'components/Profile/Profile';
 
 import user from 'data/user';
 import data from 'data/data';
+import friends from 'data/friends';
+import transactions from 'data/transactions'
+import { Profile } from 'components/Profile/Profile';
 import { Statistics } from './Statistics/Statistics';
-
+import { FriendList } from './Friend-list/Friend-list';
+import { TransactionHistory } from './Transaction-history/Transaction-history';
 
 export const App = () => {
   return (
@@ -33,6 +19,8 @@ export const App = () => {
         stats={user.stats}
       />
       <Statistics stats={data} title="Upload stats" />
+      <FriendList friends={friends} />
+      <TransactionHistory items={transactions}/>
     </div>
   );
 };
