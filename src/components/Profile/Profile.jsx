@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { ProfileCard, ProfileImg, ProfileStats, ProfileDesc } from './Profile.styled';
 
 export const Profile = ({
   avatar = 'https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?dpr=2&h=480&w=640',
@@ -8,15 +9,16 @@ export const Profile = ({
   stats: { followers, views, likes },
 }) => {
   return (
-    <div className="profile">
-      <div className="description">
-        <img src={avatar} alt="User avatar" className="avatar" />
+    <ProfileCard>
+      <ProfileDesc>
+        <ProfileImg src={avatar} alt="User avatar"/>
         <p className="name">{username}</p>
         <p className="tag">@ {tag}</p>
         <p className="location">{location}</p>
-      </div>
+      </ProfileDesc>
 
-      <ul className="stats">
+      
+      <ProfileStats>
         <li>
           <span className="label">Followers</span>
           <span className="quantity">{followers}</span>
@@ -29,8 +31,8 @@ export const Profile = ({
           <span className="label">Likes</span>
           <span className="quantity">{likes}</span>
         </li>
-      </ul>
-    </div>
+      </ProfileStats>
+    </ProfileCard>
   );
 };
 
