@@ -8,6 +8,8 @@ import { Statistics } from './Statistics/Statistics';
 import { FriendList } from './Friend-list/Friend-list';
 import { TransactionHistory } from './Transaction-history/Transaction-history';
 
+
+
 export const App = () => {
   return (
     <div>
